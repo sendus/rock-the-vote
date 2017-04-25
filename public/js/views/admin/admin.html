@@ -1,0 +1,58 @@
+<div class="container" ng-init="loadData()">
+    <div class="row">
+        <div class="col-md-12" id="input">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>NAME</label>
+                    <input ng-model="name" class="form-control"> </div>
+                <div class="col-md-6">
+                    <label>PRICE</label>
+                    <input ng-model="price" class="form-control"> </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label>INGREDIENTS</label>
+                    <input ng-model="ingredients" class="form-control"> </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label>IMAGE-URL</label>
+                    <input ng-model="imageurl" class="form-control"> </div>
+            </div>
+            <button id="adding" ng-click="add()" type="button" class="w3-button w3-ripple" style="width:20%">ADD</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-4" ng-repeat="item in data | orderBy:item.vote:true">
+            <div id="response">
+                <p class="name"> {{item.name}}</p>
+                <input class="sasa" ng-model="item.name" ng-if="item.show">
+                <p class="prop"> {{item.price}} LBP</p>
+                <input class="sasa" ng-model="item.price" ng-if="item.show">
+                <p class="prop"> {{item.ingredients}}</p>
+                <input class="sasa" ng-model="item.ingredients" ng-if="item.show"> 
+                <img class="propimg" src="{{item.imageurl}}" width="200" height="200">
+                <input class="sasa" ng-model="item.imageurl" ng-if="item.show">
+                <div class="row">
+                    <div class="col-md-4">
+                        <button ng-if="!item.show" ng-click="edit(item._id)" class="editing"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                        <button ng-if="item.show" ng-click="save(item._id,item)" class="editing"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="vote">{{item.vote}}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <button ng-click="delete(item._id)" class="deleting"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="row" id="commmm">
+                    <div class="col-md-12">
+                        <li class="comments" ng-repeat="comment in item.comments track by $index"> {{comment}}</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

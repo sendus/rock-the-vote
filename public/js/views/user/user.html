@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <img  class="begin" src = "/views/neede.jpg"> </div>
+    </div>
+    <div class="row" ng-init="loadData()">
+        <div class="col-md-4" ng-repeat="item in data | orderBy:item.vote:true track by $index">
+            <div id="response">
+                <p class="name"> {{item.name}}</p>
+                <p class="prop"> {{item.price}} LBP</p>
+                <p class="prop"> {{item.ingredients}}</p> <img class="propimg" src="{{item.imageurl}}" width="200" height="200">
+<!--
+                <div class="row">
+                    <div class="col-md-6">
+                        <button ng-click="edit(item._id, name, price, ingredients, imageurl)" class="editing"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="col-md-6">
+                        <button ng-click="delete(item._id)" class="deleting"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+-->
+                <div class="row">
+                    <div class="col-md-4"><button ng-click="upVote(item._id, item.vote)">
+                    <i id="like2"  class="glyphicon glyphicon-thumbs-up"></i></button>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="vote">{{item.vote}}</p>
+                    </div>
+                    <div class="col-md-4"><button ng-click="downVote(item._id, item.vote)">
+                    <i id="dislike2"  class="glyphicon glyphicon-thumbs-down"></i></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button ng-click="go('/comen',item._id)" class="showing">SHOW</button>
+                        <!--                commenting(item._id, lala)-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

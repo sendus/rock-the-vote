@@ -1,0 +1,43 @@
+<div class="row" ng-init="loadData()">
+    <div id="response">
+        <div class="col-md-4"> 
+            <img class="propimg" src="{{data.imageurl}}" width="300" height="300"> 
+        </div>
+        <div class="col-md-8">
+           <div class="row">
+            <p class="name"> {{data.name}}</p>
+            <p class="prop"> {{data.price}} LBP</p>
+            <p class="prop"> {{data.ingredients}}</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4"><button ng-click="upVote(data._id, data.vote)" class="glyphicon glyphicon-thumbs-up"></button>
+                </div>
+                <div class="col-md-4">
+                    <p class="vote">{{data.vote}}</p>
+                </div>
+                <div class="col-md-4"><button ng-click="downVote(data._id, data.vote)" class="glyphicon glyphicon-thumbs-down"></button>
+                </div>
+            </div>
+            <div class="row" id="commmm">
+                <div class="row">
+                    <div class="col-md-10">
+                       <form name="myForm"><input ng-model="lala" class="form-control" placeholder="Add a Comment" required> </div></form>
+                        
+                    <div class="col-md-2">
+                        <button ng-click="commenting(data._id, lala)" ng-disabled="myForm.$invalid">+</button>
+                    </div>
+                </div>
+                    <div class="row">
+                        <li class="comments" ng-repeat="com in data.comments track by $index"> {{com}}</li>
+                    </div>
+            </div>
+<!--
+            <div class="row">
+                <div class="col-md-12">
+                    <li class="comments" ng-repeat="comment in data.comments track by $index"> {{comment}}</li>
+                </div>
+            </div>
+-->
+        </div>
+    </div>
+</div>

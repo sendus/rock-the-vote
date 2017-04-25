@@ -1,0 +1,90 @@
+body {
+    text-align: center;
+    background-image: url(../views/golden-bokeh-background_1048-75.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#navigation {
+    color:#d2d2d2;
+    background-color: #104c2d;
+    font-size: 30px;
+    font-weight: 700;
+    font-family:fantasy;
+}
+#input {
+    background-color: #104c2d;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    text-align: left;
+}
+#commmm{
+    text-align: left;
+}
+button {
+    background-color: rgba(245, 222, 179, 0);
+    border-color: rgba(245, 222, 179, 0);
+}
+.propimg {
+    border-radius: 150px;
+}
+#response {
+    background-color: rgba(16, 76, 45, 0.49);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    color: black;
+    font-family: fantasy;
+    font-weight: 700;
+    font-size: 30px;
+}
+.name{
+    font-size: 40px;
+    font-weight: bold;
+}
+.form-control{
+    color: black;
+    font-family: fantasy;
+    font-size: 30px;
+    height: 40px;
+}
+#adding {
+    border-radius: 10px;
+    color: #082717;
+    background-color: antiquewhite;
+    font-size: 30px;
+    height: 50px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: fantasy;
+}
+label {
+    color: wheat;
+    font-family:fantasy;
+    font-size: 40px;
+}
+.qwerty {
+    font-family:fantasy;
+    font-size: 40px;
+    font-weight: bold;
+    color:#082717;
+}
+.vote {
+    color:black;
+}
+.sasa {
+    width: 90%;
+    border-radius: 15px;
+    background-color: rgba(250, 235, 215, 0.36);
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-color: rgba(250, 235, 215, 0.36);
+}
+.begin {
+    width: 100%;
+    height:65vh;
+}
